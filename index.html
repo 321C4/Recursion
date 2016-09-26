@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--The head tag encloses links to any scripts you are using, scene title, and metadata such as favicon-->
+ 	<head>
+ 		<meta charset="utf-8">
+ 		<title>Final Recursion</title>
+		<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+		<link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
+ 	</head>
+<!--The scene must be enclosed in a <body> tag-->
+	<body>
+
+<!--All of the entities in your scene must be between the <a-scene> tags!-->
+		<a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js" fog="type: exponential; color: #536C99; density: 0.05">
+		<a-assets>
+		<a-asset-item id="tree" src="models/tree3.dae"></a-asset-item>
+		<a-asset-item id="house" src="models/dark_house2.dae"></a-asset-item>
+		<a-asset-item id="cyprus" src="models/cyprus-med.dae"></a-asset-item>
+		</a-assets>
+
+		<a-sky color="#5CAAEB"></a-sky>
+
+
+		<a-camera position="0, 1.8, 0"></a-camera>
+
+<!--Add some lights to the scene-->
+		<a-entity light="color: #ffffff; intensity: 0.5" position="0, 2, 0" type="ambient"></a-entity>
+
+<!--This plane is the ground, in the scene-->
+		<a-plane height="100" width="100" rotation="-90, 0, 0" color="#042E85" opactity="0.3" position="0, -45, 0"></a-plane>
+
+	    <a-collada-model src="#tree" scale="20, 20, 20" position="0, 0, 0"></a-collada-model>
+	    <a-collada-model src="#house" position="0, 1, 0"></a-collada-model>
+
+	     <a-collada-model src="#tree" scale="0.5, 0.5, 0.5" position="7, 2, 0" rotation="0, 90, 0">
+	     <a-collada-model src="#house" scale="0.06, 0.06, 0.06" position="0, 0, 0">
+	     </a-collada-model>
+	     <a-entity light="color: #3CFF4D; intensity: 0.5" position="0, 0, 0" type="point"></a-entity>
+		</a-collada-model>
+
+				<a-sphere scale="4, 0.3, 3" color="#FFB707">
+			<a-animation attribute="opacity"
+			from="0"
+			to="0.7"
+			dur="10000"
+			direction="alternate"
+			easing="ease-in-out"
+			repeat="indefinite"
+			></a-animation>
+			<a-animation attribute="position"
+			from="-4 2 -4"
+			to="8 2 -4"
+			dur="20000"
+			direction="normal"
+			easing="linear"
+			repeat="indefinite"
+			></a-animation>
+		</a-sphere>
+
+						<a-sphere scale="3, 0.3, 2" color="#FFB707">
+			<a-animation attribute="opacity"
+			from="0"
+			to="0.7"
+			dur="12000"
+			direction="alternate"
+			easing="ease-in-out"
+			repeat="indefinite"
+			></a-animation>
+			<a-animation attribute="position"
+			from="-4 2 4"
+			to="8 2 4"
+			dur="24000"
+			direction="normal"
+			easing="linear"
+			repeat="indefinite"
+			></a-animation>
+		</a-sphere>
+
+		</a-scene>
+
+	</body>	
+
+</html>	
