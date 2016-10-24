@@ -3,7 +3,7 @@
  	<head>
  		<meta charset="utf-8">
  		<title>Final Recursion</title>
-		<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+		<script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
 		<link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
  	</head>
 <!--The scene must be enclosed in a <body> tag-->
@@ -13,14 +13,15 @@
 		<a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js" fog="type: exponential; color: #536C99; density: 0.05">
 		<a-assets>
 		<a-asset-item id="tree" src="models/tree3.dae"></a-asset-item>
-		<a-asset-item id="house" src="models/dark_house2.dae"></a-asset-item>
+		<a-asset-item id="house" src="models/darkhouse3.dae"></a-asset-item>
 		<a-asset-item id="cyprus" src="models/cyprus-med.dae"></a-asset-item>
 		</a-assets>
 
 		<a-sky color="#5CAAEB"></a-sky>
 
-
-		<a-camera position="0, 1.8, 0"></a-camera>
+		<a-entity position="9.5 0 0">
+		<a-camera></a-camera>
+		</a-entity>
 
 <!--Add some lights to the scene-->
 		<a-entity light="color: #ffffff; intensity: 0.5" position="0, 2, 0" type="ambient"></a-entity>
